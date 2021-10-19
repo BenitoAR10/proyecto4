@@ -5,46 +5,38 @@
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav>
-            <b-nav-item :to="{name:'home'}">Home</b-nav-item>
-            <b-nav-item :to="{name:'MiComponente'}">Ofertas de casas</b-nav-item>
-            <b-nav-item :to="{name:'MiComponente'}">Requerimientos de clientes</b-nav-item>
-            <b-nav-item :to="{name:'HelloWord'}">Contactos</b-nav-item>
+            <b-nav-item :to="{name:'Home'}">Home</b-nav-item>
+            <b-nav-item :to="{name:'About'}">Ofertas de casas</b-nav-item>
+            <b-nav-item :to="{name:'Clientes'}">Requerimientos de clientes</b-nav-item>
+            <b-nav-item :to="{name:'Contactos'}">Contactos</b-nav-item>
           </b-navbar-nav>
         </b-collapse>
-    </b-navbar>
-
-    
-
-    <HelloWorld msg="Bienvenido a"/>
-    <MiComponente></MiComponente>
-    <Info></Info>
-    <Ofertas></Ofertas>
-    <Footer></Footer>
-    
-    
-    
+    </b-navbar>  
+    <router-view/>
+    <p class="fs-5 px-3 pt-3">Empresa Inmobiliaria &copy; Realizado por Amir Rojas 2021</p>
   </div>
+  
 </template>
 
-<script>
-
-import HelloWorld from './components/HelloWorld.vue'
-import MiComponente from './components/MiComponente.vue'
-import Info from './components/Info.vue'
-import Footer from './components/Footer.vue'
-import Ofertas from './components/Ofertas.vue';
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld,
-    MiComponente,
-    Info,
-    Footer,
-    Ofertas
-  }
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
 }
 
-</script>
+#nav {
+  padding: 30px;
+}
 
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
 
+#nav a.router-link-exact-active {
+  color: #42b983;
+}
+</style>
